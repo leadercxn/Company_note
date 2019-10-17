@@ -304,7 +304,7 @@ typedef struct
 ```
 
 + sx1276的配置参数
-    + 顶层封装
+	+ 顶层封装
 ```C
 typedef struct SX1276_s
 {
@@ -313,7 +313,7 @@ typedef struct SX1276_s
 } SX1276_t;
 ```
 	
-    + RadioSettings_t 设置成员
+	+ RadioSettings_t 设置成员
 ```
 typedef struct
 {
@@ -327,7 +327,7 @@ typedef struct
 }RadioSettings_t;
 ```
 	
-    + RadioState_t 所处的状态
+	+ RadioState_t 所处的状态
 ```
 typedef enum
 {
