@@ -5,7 +5,7 @@
 > 概念 : 定时扫描信道，检测lora数据包的前导码，
 降低功耗。随着扩频调制技术的应用，人们无法确认信道被占有，是由于低噪声影响，还是真的数据来到，所以引入了CAD检测。LoRa CAD检测方法：从机设置好频率和扩频因子，开启CAD模式，（注意：无论是否有信号到来，都会产生CADDone中断），当有匹配（相同的频率和扩频因子）的信号到来时，就会产生CADDetect中断，CADDone也会产生，并且，CADDetect和CADDone会同时产生。
 
-[CAD模型的多节点检测介绍链接](http://www.pianshen.com/article/1026562256/;jsessionid=107825730CF41CCF2D201B4BFD374C09)
+[CAD模型的多节点检测介绍链接](http://www.pianshen.com/article/1026562256/;jsessionid=107825730CF41CCF2D201B4BFD374C09)<br>
 [无线节点的空中唤醒技术](https://blog.csdn.net/iotisan/article/details/55695465)，介绍CAD的原理，以及 空中唤醒优化的方法 及 噪音的应对，传输锁相的介绍
 
 > 数据帧的结构形式:<br>
