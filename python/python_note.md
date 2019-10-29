@@ -40,8 +40,8 @@
   ```
 
 + `class   def: __init__(self) `的用法<br>
-self只能用在python类的方法（即函数）中。举例：
-   ```
+  ```
+   self只能用在python类的方法（即函数）中。举例：
    class cxnprint:
     def __init__(self,envType='caonima'):
         self.domain = envType
@@ -58,7 +58,7 @@ self只能用在python类的方法（即函数）中。举例：
   you is : haha
   
   理解：self是继承class对象后的继承体的成员，而非类自身的成员。假如使用的是类的方法（函数），记得后面加（）号
-   ```
+  ```
  
 + `if __name__ == '__main__' `的用法和理解
   ```
@@ -89,3 +89,35 @@ self只能用在python类的方法（即函数）中。举例：
   
   假如两个文件都没有if __name__ == "__main__":修饰，则会有两个打印
   ```
+
++ import os 访问操作系统功能的模块(感觉有点似命令行)<br>
+  ```
+  os.mkdir()  创建目录
+  os.chdir()  改变当前目录
+  
+  ```
++ import json模块
+  ```
+  json.dumps   json中的dumps方法是用来将特定格式的数据进行字符串化的操作，比如列表字典都可以进行字符串化操作然后写入json的file；
+  json.loads   loads用来将字符型数据转换成原来的数据格式，诸如列表和字典，就是原本是什么格式就还原成什么格式。
+  带有s的方法都是不涉及文件操作的，没有带s的方法都是涉及到文件的操作的。
+  
+  data = {
+    'name' : 'Connor',
+    'sex' : 'boy',
+    'age' : 26
+  }
+  print(data)
+  data1=json.dumps(data)
+  print(data1)
+  data2=json.loads(data1)
+  print(data2)
+
+  #对应输出结果
+  {'name': 'Connor', 'sex': 'boy', 'age': 26}#原型       data
+  {"name": "Connor", "sex": "boy", "age": 26}#json格式   data1
+  {'name': 'Connor', 'sex': 'boy', 'age': 26}#返回原型    data2
+  
+  ```
+
+
