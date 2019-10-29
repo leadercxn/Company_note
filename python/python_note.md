@@ -54,6 +54,33 @@ self只能用在python类的方法（即函数）中。举例：
   
   理解：self是继承class对象后的继承体的成员，而非类自身的成员。假如使用的是类的方法（函数），记得后面加（）号
    ```
-   
+ 
++ `if __name__ == '__main__' `的用法和理解
+  ```
+  __name__是一个变量。前后加了爽下划线是因为是因为这是系统定义的名字。普通变量不要使用此方式命名变量。
+  Python有很多模块，而这些模块是可以独立运行的！这点不像C++和C的头文件。
+  import的时候是要执行所import的模块的。
+  __name__就是标识模块的名字的一个系统变量。这里分两种情况：假如当前模块是主模块（也就是调用其他模块的模块），那么此模块名字就是__main__，通过if判断这样就可以执行“__mian__:”后面的主函数内容；假如此模块是被import的，则此模块名字为文件名字（不加后面的.py），通过if判断这样就会跳过“__mian__:”后面的内容。
+  跟C区别的在于，C的include .h的时候，不执行.h里面的内容 ，python 的import module时候，会执行module里面相关的函数
 
-   
+  举例：
+  在main.py里面 有import module.py ,也有 if __name__ == '__main__'，
+  那么在命令行执行 python main.py时， 主模块默认是main.py,那么会执行main.py里面相关的输出函数，而会屏蔽module里面相关的函数
+  
+  macprastic.py
+  def hello():
+    print "hello.cxn"
+    
+  if __name__ == "__main__":
+    hello()
+    
+  macmain.py
+  import mac_prastic
+
+  if __name__ == "__main__":
+    mac_prastic.hello()
+  终端命令行：python macmain.py
+  result： hello.cxn
+  
+  假如两个文件都没有if __name__ == "__main__":修饰，则会有两个打印
+  ```
