@@ -9,13 +9,18 @@
 
 + `import requests `导入requests模块 （cmd: pip install requests 进行安装）<br>
   向第三方发送http请求的应用场景。
-  + requests模块发送post请求
+  + requests模块发送post请求,即向服务器发送数据
   ```
   requests.post(url=url, headers=headers, data=params)
   
     url：请求url地址
     headers：请求头
     data：发送编码为表单形式的数据
+    
+    举例：(向服务器发送数据)
+    payload = {"key1":"cxn","keycxn":"diuleiloumou"}
+    r1=requests.post("http://httpbin.org/post",data=payload)#因为返回的报文类型是 json 格式的类型，所以我们可以用 .json 来接收
+    r1.json()
   ```
   
   + requests模块上传文件
