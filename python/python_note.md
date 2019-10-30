@@ -119,5 +119,6 @@
   {'name': 'Connor', 'sex': 'boy', 'age': 26}#返回原型    data2
   
   ```
-
++ python str.编码，解码
+![]()
 
