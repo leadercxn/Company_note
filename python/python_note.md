@@ -120,5 +120,7 @@
   
   ```
 + python str.编码，解码
-![]()
+![](https://raw.githubusercontent.com/leadercxn/SENSORO/9bef8c89d9f887bdfceadb25f3956399106dfb1f/python/python字符串的编码解码.png)
+
+
 
